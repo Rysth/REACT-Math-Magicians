@@ -26,9 +26,9 @@
 
 <!-- PROJECT DESCRIPTION -->
 
-# 📖 Valorant Cyphers Conference Page <a name="about-project"></a>
+# 📖 REACT Math Magicians <a name="about-project"></a>
 
-A **Conference Page** that allows users to attend a Valorant Game to know about how to play with Chyper by presenting to them the most important pro players. Built with HTML, CSS, JavaScript, and Bootstrap.
+- **⌛ Coming soon.**
 
 ## 🛠 Built With <a name="built-with"></a>
 
@@ -41,7 +41,6 @@ A **Conference Page** that allows users to attend a Valorant Game to know about 
     <li><a href="https://www.w3schools.com/html/">HTML</a></li>
     <li><a href="https://www.w3schools.com/css/">CSS</a></li>
     <li><a href="https://www.w3schools.com/js/">JavaScript</a></li>
-    <li><a href="https://www.behance.net/gallery/29845175/CC-Global-Summit-2015">Behance</a></li>
   </ul>
 </details>
 
@@ -49,10 +48,7 @@ A **Conference Page** that allows users to attend a Valorant Game to know about 
 
 ### Key Features <a name="key-features"></a>
 
-- **Great Design and Colors.**
-- **Good Practices within each File.**
-- **Excellent Content displayed.**
-- **Behance Design Guideline.**
+- **⌛ Coming soon.**
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
