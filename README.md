@@ -14,6 +14,7 @@
   - [🛠 Built With](#built-with)
     - [Tech Stack](#tech-stack)
     - [Key Features](#key-features)
+    - [Future Features](#future-features)
   - [🚀 Live Demo](#live-demo)
 - [💻 Getting Started](#getting-started)
   - [Setup](#setup)
@@ -53,16 +54,16 @@
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
+### Future Features <a name="future-features"></a>
+
+- **Implement a Database**
+
 ## 🚀 Live Demo <a name="live-demo"></a>
 
 <div align="center">
   <p><b>Design Preview</b></p>
   <img src="./src/preview.png" alt="Design Preview Screenshot" style="object-fit:cover;"/>
 </div>
-
-### Take a Look
-
-- [Live Demo Link](https://rysth.github.io/REACT-Math-Magicians/)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -75,7 +76,7 @@ To get a local copy up and running, follow these steps.
 Clone this repository to your desired folder:
 
 ```
-git clone https://github.com/Rysth/REACT-Math-Magicians
+git clone https://github.com/Rysth/REACT-Math-Magicians.git
 cd REACT-Math-Magicians
 code . (To open VS Code Editor)
 ```
