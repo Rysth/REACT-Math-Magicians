@@ -28,10 +28,10 @@
 
 # 📖 REACT Math Magicians <a name="about-project"></a>
 
-<div align="center">
+<!-- <div align="center">
   <p><b>Design Preview</b></p>
   <img src="./src/preview.png" alt="Design Preview Screenshot" style="object-fit:cover;"/>
-</div>
+</div> -->
 
 - **REACT Math Magicians** is a website for all fans of mathematics. It is a Single Page App (SPA) that allows users to make simple calculations and
   read a random math-related quote. Build with React.
