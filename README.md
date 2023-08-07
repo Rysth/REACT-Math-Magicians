@@ -98,14 +98,11 @@ Then, you will change everything you want!
 In order to follow the Linters you could check them using this:
 
 ```
-HTML Checker:
-npx hint .
-
 CSS Checker:
 npx stylelint "**/*.{css,scss}"
 
-JavaScript Checker:
-npx eslint .
+ESLint Checker:
+npx eslint "**/*.{js,jsx}"
 ```
 
 #### Note
