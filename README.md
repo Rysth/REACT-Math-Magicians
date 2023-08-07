@@ -15,7 +15,6 @@
     - [Tech Stack](#tech-stack)
     - [Key Features](#key-features)
     - [Future Features](#future-features)
-  - [🚀 Live Demo](#live-demo)
 - [💻 Getting Started](#getting-started)
   - [Setup](#setup)
   - [Test](#test)
@@ -28,6 +27,11 @@
 <!-- PROJECT DESCRIPTION -->
 
 # 📖 REACT Math Magicians <a name="about-project"></a>
+
+<div align="center">
+  <p><b>Design Preview</b></p>
+  <img src="./src/preview.png" alt="Design Preview Screenshot" style="object-fit:cover;"/>
+</div>
 
 - **REACT Math Magicians** is a website for all fans of mathematics. It is a Single Page App (SPA) that allows users to make simple calculations and
   read a random math-related quote. Build with React.
@@ -57,15 +61,6 @@
 ### Future Features <a name="future-features"></a>
 
 - **Implement a Database**
-
-## 🚀 Live Demo <a name="live-demo"></a>
-
-<div align="center">
-  <p><b>Design Preview</b></p>
-  <img src="./src/preview.png" alt="Design Preview Screenshot" style="object-fit:cover;"/>
-</div>
-
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 ## 💻 Getting Started <a name="getting-started"></a>
 
