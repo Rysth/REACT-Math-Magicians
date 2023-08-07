@@ -60,7 +60,7 @@ A **Conference Page** that allows users to attend a Valorant Game to know about 
 
 <div align="center">
   <p><b>Design Preview</b></p>
-  <img src="./resources/images/preview.png" alt="Design Preview Screenshot" style="object-fit:cover;"/>
+  <img src="./src/preview.png" alt="Design Preview Screenshot" style="object-fit:cover;"/>
 </div>
 
 ### Take a Look
