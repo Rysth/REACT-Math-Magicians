@@ -80,6 +80,17 @@ code . (To open VS Code Editor)
 
 Then, you will change everything you want!
 
+### Commands
+
+- ✔️ _npm start_:
+  Runs the app in the development mode. Open http://localhost:3000 to view it in the browser.
+
+- ✔️ _npm test_:
+  Launches the test runner in the interactive watch mode. See the section about running tests for more information.
+
+- ✔️ _npm run build_:
+  Builds the app for production to the build folder. It correctly bundles React in production mode and optimizes the build for the best performance.
+
 ### Test
 
 In order to follow the Linters you could check them using this:
