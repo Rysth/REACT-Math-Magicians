@@ -14,7 +14,7 @@
   - [🛠 Built With](#built-with)
     - [Tech Stack](#tech-stack)
     - [Key Features](#key-features)
-  - [🚀 Live Demo](#live-demo)
+    - [Future Features](#future-features)
 - [💻 Getting Started](#getting-started)
   - [Setup](#setup)
   - [Test](#test)
@@ -27,6 +27,11 @@
 <!-- PROJECT DESCRIPTION -->
 
 # 📖 REACT Math Magicians <a name="about-project"></a>
+
+<!-- <div align="center">
+  <p><b>Design Preview</b></p>
+  <img src="./src/preview.png" alt="Design Preview Screenshot" style="object-fit:cover;"/>
+</div> -->
 
 - **REACT Math Magicians** is a website for all fans of mathematics. It is a Single Page App (SPA) that allows users to make simple calculations and
   read a random math-related quote. Build with React.
@@ -53,18 +58,9 @@
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
-## 🚀 Live Demo <a name="live-demo"></a>
+### Future Features <a name="future-features"></a>
 
-<div align="center">
-  <p><b>Design Preview</b></p>
-  <img src="./src/preview.png" alt="Design Preview Screenshot" style="object-fit:cover;"/>
-</div>
-
-### Take a Look
-
-- [Live Demo Link](https://rysth.github.io/REACT-Math-Magicians/)
-
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
+- **Implement a Database**
 
 ## 💻 Getting Started <a name="getting-started"></a>
 
@@ -75,7 +71,7 @@ To get a local copy up and running, follow these steps.
 Clone this repository to your desired folder:
 
 ```
-git clone https://github.com/Rysth/REACT-Math-Magicians
+git clone https://github.com/Rysth/REACT-Math-Magicians.git
 cd REACT-Math-Magicians
 code . (To open VS Code Editor)
 ```
@@ -98,14 +94,11 @@ Then, you will change everything you want!
 In order to follow the Linters you could check them using this:
 
 ```
-HTML Checker:
-npx hint .
-
 CSS Checker:
 npx stylelint "**/*.{css,scss}"
 
-JavaScript Checker:
-npx eslint .
+ESLint Checker:
+npx eslint "**/*.{js,jsx}"
 ```
 
 #### Note
