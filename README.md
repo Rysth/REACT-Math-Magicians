@@ -37,7 +37,6 @@
 <details>
   <summary>Client</summary>
   <ul>
-    <li><a href="https://getbootstrap.com/">Bootstrap</a></li>
     <li><a href="https://www.w3schools.com/html/">HTML</a></li>
     <li><a href="https://www.w3schools.com/css/">CSS</a></li>
     <li><a href="https://www.w3schools.com/js/">JavaScript</a></li>
