@@ -6,6 +6,7 @@ export default function App() {
   return (
     <div className="container">
       <Title text="Calculator App" />
+      <Subtitle text="John Palacios" />
       <Calculator />
     </div>
   );
@@ -20,5 +21,17 @@ Title.defaultProps = {
 };
 
 Title.propTypes = {
+  text: PropTypes.string,
+};
+
+function Subtitle({ text }) {
+  return <h2 className="subtitle">{text}</h2>;
+}
+
+Subtitle.defaultProps = {
+  text: '',
+};
+
+Subtitle.propTypes = {
   text: PropTypes.string,
 };

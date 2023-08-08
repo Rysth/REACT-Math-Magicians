@@ -2,25 +2,25 @@ import PropTypes from 'prop-types';
 import './Calculator.css';
 
 const calculatorButtons = [
-  { id: 0, content: 'AC' },
-  { id: 1, content: '+/-' },
-  { id: 2, content: '%' },
-  { id: 3, content: '÷' },
-  { id: 4, content: '7' },
-  { id: 5, content: '8' },
-  { id: 6, content: '9' },
-  { id: 7, content: 'x' },
-  { id: 8, content: '4' },
-  { id: 9, content: '5' },
-  { id: 10, content: '6' },
-  { id: 11, content: '-' },
-  { id: 12, content: '1' },
-  { id: 13, content: '2' },
-  { id: 14, content: '3' },
-  { id: 15, content: '+' },
-  { id: 16, content: '0' },
-  { id: 17, content: '.' },
-  { id: 18, content: '=' },
+  { id: 0, classValue: '', content: 'AC' },
+  { id: 1, classValue: '', content: '+/-' },
+  { id: 2, classValue: '', content: '%' },
+  { id: 3, classValue: 'operation', content: '÷' },
+  { id: 4, classValue: '', content: '7' },
+  { id: 5, classValue: '', content: '8' },
+  { id: 6, classValue: '', content: '9' },
+  { id: 7, classValue: 'operation', content: 'x' },
+  { id: 8, classValue: '', content: '4' },
+  { id: 9, classValue: '', content: '5' },
+  { id: 10, classValue: '', content: '6' },
+  { id: 11, classValue: 'operation', content: '-' },
+  { id: 12, classValue: '', content: '1' },
+  { id: 13, classValue: '', content: '2' },
+  { id: 14, classValue: '', content: '3' },
+  { id: 15, classValue: 'operation', content: '+' },
+  { id: 16, classValue: 'expanded', content: '0' },
+  { id: 17, classValue: '', content: '.' },
+  { id: 18, classValue: 'operation', content: '=' },
 ];
 
 export default function Calculator() {
@@ -39,7 +39,7 @@ export default function Calculator() {
 }
 
 function CalculatorResult({ result }) {
-  return <input className="calculator-result" type="text" value={result} />;
+  return <input className="calculator-result" type="text" value={result} readOnly />;
 }
 
 CalculatorResult.defaultProps = {
@@ -54,7 +54,11 @@ function CalculatorGroup({ array }) {
   return (
     <div className="calculator-group">
       {array.map((element) => (
-        <CalculatorButton key={element.id} content={element.content} />
+        <CalculatorButton
+          key={element.id}
+          classValue={element.classValue}
+          content={element.content}
+        />
       ))}
     </div>
   );
@@ -65,12 +69,14 @@ CalculatorGroup.defaultProps = {
 };
 
 CalculatorGroup.propTypes = {
-  array: PropTypes.arrayOf(PropTypes.string),
+  array: PropTypes.arrayOf(PropTypes.objectOf),
 };
 
-function CalculatorButton({ content }) {
+function CalculatorButton({ content, classValue }) {
+  const classList = `calculator-button ${classValue}`;
+
   return (
-    <button type="button" className="calculator-button">
+    <button type="button" className={classList}>
       {content}
     </button>
   );
@@ -78,8 +84,10 @@ function CalculatorButton({ content }) {
 
 CalculatorButton.defaultProps = {
   content: '',
+  classValue: '',
 };
 
 CalculatorButton.propTypes = {
   content: PropTypes.string,
+  classValue: PropTypes.string,
 };
