@@ -1,4 +1,5 @@
-import PropTypes from 'prop-types';
+import CalculatorResult from './CalculatorResult';
+import CalculatorGroup from './CalculatorGroup';
 import './Calculator.css';
 
 const calculatorButtons = [
@@ -37,57 +38,3 @@ export default function Calculator() {
     </div>
   );
 }
-
-function CalculatorResult({ result }) {
-  return <input className="calculator-result" type="text" value={result} readOnly />;
-}
-
-CalculatorResult.defaultProps = {
-  result: 0,
-};
-
-CalculatorResult.propTypes = {
-  result: PropTypes.number,
-};
-
-function CalculatorGroup({ array }) {
-  return (
-    <div className="calculator-group">
-      {array.map((element) => (
-        <CalculatorButton
-          key={element.id}
-          classValue={element.classValue}
-          content={element.content}
-        />
-      ))}
-    </div>
-  );
-}
-
-CalculatorGroup.defaultProps = {
-  array: [],
-};
-
-CalculatorGroup.propTypes = {
-  array: PropTypes.arrayOf(PropTypes.objectOf),
-};
-
-function CalculatorButton({ content, classValue }) {
-  const classList = `calculator-button ${classValue}`;
-
-  return (
-    <button type="button" className={classList}>
-      {content}
-    </button>
-  );
-}
-
-CalculatorButton.defaultProps = {
-  content: '',
-  classValue: '',
-};
-
-CalculatorButton.propTypes = {
-  content: PropTypes.string,
-  classValue: PropTypes.string,
-};
