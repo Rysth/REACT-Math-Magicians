@@ -2,8 +2,7 @@
   --CL-primary-orange: #f4903e;
   --CL-primary-light: #e0e1e1;
   --CL-primary-gray: #848692;
-
-  --CL-neutral-white: #ffffff;
+  --CL-neutral-white: #fff;
   --CL-neutral-black: #000;
 }
 
@@ -38,6 +37,7 @@
   cursor: pointer;
   outline: 1px solid var(--CL-primary-light);
   transition: 0.15s;
+  font-size: 0.95rem;
 }
 
 .calculator-button.operation {
@@ -55,10 +55,6 @@
 
 .calculator-button:active {
   transform: scale(0.95);
-}
-
-.calculator-button {
-  font-size: 0.95rem;
 }
 
 @media (min-width: 768px) {
