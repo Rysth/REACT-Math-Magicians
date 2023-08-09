@@ -27,7 +27,7 @@ const calculatorButtons = [
 ];
 
 let CalculatorObject = {
-  total: 0,
+  total: '',
   next: '',
   operation: '',
 };
@@ -41,22 +41,27 @@ export default function Calculator() {
       CalculatorObject = calculate(CalculatorObject, buttonName.buttonName);
       const totalValue = Number.parseFloat(CalculatorObject.total);
       const nextValue = Number.parseFloat(CalculatorObject.next);
-      if (!totalValue && !nextValue) {
+
+      /* Check if both variables are numbers. */
+      if (Number.isNaN(totalValue) && Number.isNaN(nextValue)) {
         setResult({
           result: 0,
         });
         return;
       }
 
-      if (!Number.isNaN(nextValue)) {
-        setResult({
-          result: nextValue,
-        });
-      }
-
+      /* Check if totalValue is a Number and the Button Symbol is equal. */
       if (!Number.isNaN(totalValue) && buttonName.buttonName === '=') {
         setResult({
           result: totalValue,
+        });
+        return;
+      }
+
+      /*  Check if nextValue is a Number. */
+      if (!Number.isNaN(nextValue)) {
+        setResult({
+          result: nextValue,
         });
       }
     }
