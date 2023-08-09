@@ -27,6 +27,10 @@
   font-size: 2rem;
 }
 
+.calculator-result.active {
+  background-color: var(--CL-neutral-black);
+}
+
 .calculator-group {
   display: inherit;
   grid-template-columns: repeat(4, 1fr);

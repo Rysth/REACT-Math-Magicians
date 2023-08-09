@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import CalculatorResult from './CalculatorResult';
 import CalculatorGroup from './CalculatorGroup';
 import calculate from '../logic/Calculate';
@@ -34,15 +34,28 @@ let CalculatorObject = {
 
 export default function Calculator() {
   const [buttonName, setButtonName] = useState('');
-  /* const [result, setResult] = useState(0); */
-  if (buttonName.buttonName && buttonName.buttonName !== '') {
-    CalculatorObject = calculate(CalculatorObject, buttonName.buttonName);
-    console.log(CalculatorObject);
-  }
+  const [result, setResult] = useState(0);
+
+  useEffect(() => {
+    if (buttonName.buttonName) {
+      CalculatorObject = calculate(CalculatorObject, buttonName.buttonName);
+      const totalValue = Number.parseFloat(CalculatorObject.total);
+      /* Condition to evaluate if total is Null or total is Not a Number. */
+      if (!totalValue || Number.isNaN(totalValue)) {
+        setResult({
+          result: 0,
+        });
+        return;
+      }
+      setResult({
+        result: totalValue,
+      });
+    }
+  }, [buttonName.buttonName]);
 
   return (
     <div className="calculator">
-      <CalculatorResult buttonName={0} />
+      <CalculatorResult result={result.result} />
       <div className="calculator-body">
         <CalculatorGroup
           array={calculatorButtons.slice(0, 4)}
