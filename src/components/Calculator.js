@@ -1,5 +1,7 @@
+import { useState, useEffect } from 'react';
 import CalculatorResult from './CalculatorResult';
 import CalculatorGroup from './CalculatorGroup';
+import calculate from '../logic/Calculate';
 import './Calculator.css';
 
 const calculatorButtons = [
@@ -24,16 +26,71 @@ const calculatorButtons = [
   { id: 18, classValue: 'operation', content: '=' },
 ];
 
+let CalculatorObject = {
+  total: '',
+  next: '',
+  operation: '',
+};
+
 export default function Calculator() {
+  const [buttonName, setButtonName] = useState('');
+  const [result, setResult] = useState(0);
+
+  useEffect(() => {
+    if (buttonName.buttonName) {
+      CalculatorObject = calculate(CalculatorObject, buttonName.buttonName);
+      const totalValue = Number.parseFloat(CalculatorObject.total);
+      const nextValue = Number.parseFloat(CalculatorObject.next);
+
+      /* Check if both variables are numbers. */
+      if (Number.isNaN(totalValue) && Number.isNaN(nextValue)) {
+        setResult({
+          result: 0,
+        });
+        return;
+      }
+
+      /* Check if totalValue is a Number and the Button Symbol is equal. */
+      if (!Number.isNaN(totalValue) && buttonName.buttonName === '=') {
+        setResult({
+          result: totalValue,
+        });
+        return;
+      }
+
+      /*  Check if nextValue is a Number. */
+      if (!Number.isNaN(nextValue)) {
+        setResult({
+          result: nextValue,
+        });
+      }
+    }
+  }, [buttonName.buttonName]);
+
   return (
     <div className="calculator">
-      <CalculatorResult />
+      <CalculatorResult result={result.result} />
       <div className="calculator-body">
-        <CalculatorGroup array={calculatorButtons.slice(0, 4)} />
-        <CalculatorGroup array={calculatorButtons.slice(4, 8)} />
-        <CalculatorGroup array={calculatorButtons.slice(8, 12)} />
-        <CalculatorGroup array={calculatorButtons.slice(12, 16)} />
-        <CalculatorGroup array={calculatorButtons.slice(16, 19)} />
+        <CalculatorGroup
+          array={calculatorButtons.slice(0, 4)}
+          setButtonName={setButtonName}
+        />
+        <CalculatorGroup
+          array={calculatorButtons.slice(4, 8)}
+          setButtonName={setButtonName}
+        />
+        <CalculatorGroup
+          array={calculatorButtons.slice(8, 12)}
+          setButtonName={setButtonName}
+        />
+        <CalculatorGroup
+          array={calculatorButtons.slice(12, 16)}
+          setButtonName={setButtonName}
+        />
+        <CalculatorGroup
+          array={calculatorButtons.slice(16, 19)}
+          setButtonName={setButtonName}
+        />
       </div>
     </div>
   );

@@ -1,7 +1,13 @@
 import PropTypes from 'prop-types';
 import CalculatorButton from './CalculatorButton';
 
-export default function CalculatorGroup({ array }) {
+export default function CalculatorGroup({ array, setButtonName }) {
+  const onHandleClick = (event) => {
+    setButtonName({
+      buttonName: event.target.innerText,
+    });
+  };
+
   return (
     <div className="calculator-group">
       {array.map((element) => (
@@ -9,6 +15,7 @@ export default function CalculatorGroup({ array }) {
           key={element.id}
           classValue={element.classValue}
           content={element.content}
+          onHandleClick={onHandleClick}
         />
       ))}
     </div>
@@ -17,8 +24,10 @@ export default function CalculatorGroup({ array }) {
 
 CalculatorGroup.defaultProps = {
   array: [],
+  setButtonName: () => {},
 };
 
 CalculatorGroup.propTypes = {
   array: PropTypes.arrayOf(PropTypes.objectOf),
+  setButtonName: PropTypes.func,
 };
