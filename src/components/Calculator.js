@@ -40,16 +40,25 @@ export default function Calculator() {
     if (buttonName.buttonName) {
       CalculatorObject = calculate(CalculatorObject, buttonName.buttonName);
       const totalValue = Number.parseFloat(CalculatorObject.total);
-      /* Condition to evaluate if total is Null or total is Not a Number. */
-      if (!totalValue || Number.isNaN(totalValue)) {
+      const nextValue = Number.parseFloat(CalculatorObject.next);
+      if (!totalValue && !nextValue) {
         setResult({
           result: 0,
         });
         return;
       }
-      setResult({
-        result: totalValue,
-      });
+
+      if (!Number.isNaN(nextValue)) {
+        setResult({
+          result: nextValue,
+        });
+      }
+
+      if (!Number.isNaN(totalValue) && buttonName.buttonName === '=') {
+        setResult({
+          result: totalValue,
+        });
+      }
     }
   }, [buttonName.buttonName]);
 
