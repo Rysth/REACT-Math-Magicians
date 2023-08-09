@@ -1,5 +1,7 @@
+import { useState } from 'react';
 import CalculatorResult from './CalculatorResult';
 import CalculatorGroup from './CalculatorGroup';
+import calculate from '../logic/Calculate';
 import './Calculator.css';
 
 const calculatorButtons = [
@@ -24,16 +26,44 @@ const calculatorButtons = [
   { id: 18, classValue: 'operation', content: '=' },
 ];
 
+let CalculatorObject = {
+  total: 0,
+  next: '',
+  operation: '',
+};
+
 export default function Calculator() {
+  const [buttonName, setButtonName] = useState('');
+  /* const [result, setResult] = useState(0); */
+  if (buttonName.buttonName && buttonName.buttonName !== '') {
+    CalculatorObject = calculate(CalculatorObject, buttonName.buttonName);
+    console.log(CalculatorObject);
+  }
+
   return (
     <div className="calculator">
-      <CalculatorResult />
+      <CalculatorResult buttonName={0} />
       <div className="calculator-body">
-        <CalculatorGroup array={calculatorButtons.slice(0, 4)} />
-        <CalculatorGroup array={calculatorButtons.slice(4, 8)} />
-        <CalculatorGroup array={calculatorButtons.slice(8, 12)} />
-        <CalculatorGroup array={calculatorButtons.slice(12, 16)} />
-        <CalculatorGroup array={calculatorButtons.slice(16, 19)} />
+        <CalculatorGroup
+          array={calculatorButtons.slice(0, 4)}
+          setButtonName={setButtonName}
+        />
+        <CalculatorGroup
+          array={calculatorButtons.slice(4, 8)}
+          setButtonName={setButtonName}
+        />
+        <CalculatorGroup
+          array={calculatorButtons.slice(8, 12)}
+          setButtonName={setButtonName}
+        />
+        <CalculatorGroup
+          array={calculatorButtons.slice(12, 16)}
+          setButtonName={setButtonName}
+        />
+        <CalculatorGroup
+          array={calculatorButtons.slice(16, 19)}
+          setButtonName={setButtonName}
+        />
       </div>
     </div>
   );
