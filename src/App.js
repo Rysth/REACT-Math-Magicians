@@ -1,5 +1,6 @@
 import PropTypes from 'prop-types';
 import Calculator from './components/Calculator';
+import Quote from './components/Quote/Quote';
 import './App.css';
 
 export default function App() {
@@ -8,6 +9,7 @@ export default function App() {
       <Title text="Calculator App" />
       <Subtitle text="John Palacios" />
       <Calculator />
+      <Quote />
     </div>
   );
 }

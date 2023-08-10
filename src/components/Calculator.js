@@ -26,50 +26,42 @@ const calculatorButtons = [
   { id: 18, classValue: 'operation', content: '=' },
 ];
 
-let CalculatorObject = {
-  total: '',
-  next: '',
-  operation: '',
-};
-
 export default function Calculator() {
+  const [calculatorData, setCalculatorData] = useState({
+    total: 0,
+    next: '',
+    operation: '',
+  });
   const [buttonName, setButtonName] = useState('');
   const [result, setResult] = useState(0);
 
   useEffect(() => {
-    if (buttonName.buttonName) {
-      CalculatorObject = calculate(CalculatorObject, buttonName.buttonName);
-      const totalValue = Number.parseFloat(CalculatorObject.total);
-      const nextValue = Number.parseFloat(CalculatorObject.next);
+    const updatedData = calculate(calculatorData, buttonName);
+    setCalculatorData(updatedData);
+    const totalValue = Number.parseFloat(updatedData.total);
+    const nextValue = Number.parseFloat(updatedData.next);
 
-      /* Check if both variables are numbers. */
-      if (Number.isNaN(totalValue) && Number.isNaN(nextValue)) {
-        setResult({
-          result: 0,
-        });
-        return;
-      }
-
-      /* Check if totalValue is a Number and the Button Symbol is equal. */
-      if (!Number.isNaN(totalValue) && buttonName.buttonName === '=') {
-        setResult({
-          result: totalValue,
-        });
-        return;
-      }
-
-      /*  Check if nextValue is a Number. */
-      if (!Number.isNaN(nextValue)) {
-        setResult({
-          result: nextValue,
-        });
-      }
+    /* Check if both variables are numbers. */
+    if (Number.isNaN(totalValue) && Number.isNaN(nextValue)) {
+      setResult(0);
+      return;
     }
-  }, [buttonName.buttonName]);
+
+    /* Check if totalValue is a Number and the Button Symbol is equal. */
+    if (!Number.isNaN(totalValue) && buttonName === '=') {
+      setResult(totalValue);
+      return;
+    }
+
+    /*  Check if nextValue is a Number. */
+    if (!Number.isNaN(nextValue)) {
+      setResult(nextValue);
+    }
+  }, [buttonName]);
 
   return (
     <div className="calculator">
-      <CalculatorResult result={result.result} />
+      <CalculatorResult result={result} />
       <div className="calculator-body">
         <CalculatorGroup
           array={calculatorButtons.slice(0, 4)}

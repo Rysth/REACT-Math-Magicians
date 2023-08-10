@@ -1,0 +1,20 @@
+.quote {
+  text-align: center;
+}
+
+.quote-description {
+  font-size: 0.9rem;
+  font-style: italic;
+}
+
+.quote-description.author {
+  font-weight: bold;
+  margin: 0;
+}
+
+.quote-loading {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: var(--CL-primary-orange);
+  filter: drop-shadow(0 0 1px rgb(0, 0, 0, 0.5));
+}
