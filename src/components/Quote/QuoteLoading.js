@@ -2,7 +2,7 @@ import PropTypes from 'prop-types';
 import { useEffect, useState } from 'react';
 
 export default function QuoteLoading({ timer }) {
-  const [message, setMessage] = useState('Loading');
+  const [message, setMessage] = useState('Loading.');
 
   useEffect(() => {
     const interval = setInterval(() => {

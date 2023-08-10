@@ -32,13 +32,13 @@ export default function Quote() {
 
     setTimeout(() => {
       setLoading(true);
-    }, 1000);
+    }, 1500);
   }, []);
 
   return (
     <div className="quote">
       {!loading ? (
-        <QuoteLoading timer={1000} />
+        <QuoteLoading timer={500} />
       ) : (
         <>
           <p className="quote-description">{quote ? quote.message : ''}</p>
