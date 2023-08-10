@@ -3,9 +3,7 @@ import CalculatorButton from './CalculatorButton';
 
 export default function CalculatorGroup({ array, setButtonName }) {
   const onHandleClick = (event) => {
-    setButtonName({
-      buttonName: event.target.innerText,
-    });
+    setButtonName(event.target.innerText);
   };
 
   return (

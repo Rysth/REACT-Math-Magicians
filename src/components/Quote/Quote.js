@@ -8,6 +8,7 @@ const API_KEY = 'ZHOU94s8oucCFyxrpI2JwA==M2wNPrWjlPP3IxK8';
 export default function Quote() {
   const [quote, setQuote] = useState();
   const [loading, setLoading] = useState(false);
+  const [error, setError] = useState(false);
 
   useEffect(() => {
     const fetchNinjaAPI = async () => {
@@ -24,6 +25,7 @@ export default function Quote() {
           author: data[0]?.author,
         });
       } catch (error) {
+        setError(true);
         throw new Error('Error fetching data.');
       }
     };
@@ -37,7 +39,7 @@ export default function Quote() {
 
   return (
     <div className="quote">
-      {!loading ? (
+      {!loading && !error ? (
         <QuoteLoading timer={500} />
       ) : (
         <>
