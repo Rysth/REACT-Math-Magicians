@@ -19,7 +19,7 @@
 .calculator-result {
   padding: 0.5em;
   width: 100%;
-  background-color: var(--CL-primary-gray);
+  background-color: var(--CL-primary);
   color: white;
   outline: 1px solid var(--CL-primary-light);
   text-align: right;
@@ -45,7 +45,8 @@
 }
 
 .calculator-button.operation {
-  background-color: var(--CL-primary-orange);
+  background-color: var(--CL-secondary);
+  color: var(--CL-neutral-white);
 }
 
 .calculator-button.expanded {
@@ -53,7 +54,7 @@
 }
 
 .calculator-button:hover {
-  background-color: var(--CL-primary-gray);
+  background-color: var(--CL-primary-orange);
   transform: scale(1.05);
 }
 

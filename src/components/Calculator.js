@@ -63,26 +63,11 @@ export default function Calculator() {
     <div className="calculator">
       <CalculatorResult result={result} />
       <div className="calculator-body">
-        <CalculatorGroup
-          array={calculatorButtons.slice(0, 4)}
-          setButtonName={setButtonName}
-        />
-        <CalculatorGroup
-          array={calculatorButtons.slice(4, 8)}
-          setButtonName={setButtonName}
-        />
-        <CalculatorGroup
-          array={calculatorButtons.slice(8, 12)}
-          setButtonName={setButtonName}
-        />
-        <CalculatorGroup
-          array={calculatorButtons.slice(12, 16)}
-          setButtonName={setButtonName}
-        />
-        <CalculatorGroup
-          array={calculatorButtons.slice(16, 19)}
-          setButtonName={setButtonName}
-        />
+        <CalculatorGroup array={calculatorButtons.slice(0, 4)} setButtonName={setButtonName} />
+        <CalculatorGroup array={calculatorButtons.slice(4, 8)} setButtonName={setButtonName} />
+        <CalculatorGroup array={calculatorButtons.slice(8, 12)} setButtonName={setButtonName} />
+        <CalculatorGroup array={calculatorButtons.slice(12, 16)} setButtonName={setButtonName} />
+        <CalculatorGroup array={calculatorButtons.slice(16, 19)} setButtonName={setButtonName} />
       </div>
     </div>
   );

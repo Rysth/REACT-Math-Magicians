@@ -1,0 +1,34 @@
+.navbar {
+  text-align: center;
+}
+
+.navbar-list {
+  list-style-type: none;
+  padding: 0;
+}
+
+.navbar-item.separator {
+  display: none;
+}
+
+.navbar-link {
+  color: var(--CL-primary);
+  text-decoration: none;
+}
+
+@media (min-width: 768px) {
+  .navbar {
+    display: flex;
+    justify-content: space-between;
+    text-align: initial;
+  }
+
+  .navbar-list {
+    display: flex;
+    gap: 0.5em;
+  }
+
+  .navbar-item.separator {
+    display: block;
+  }
+}
