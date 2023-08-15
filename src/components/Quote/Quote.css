@@ -1,9 +1,11 @@
 .quote {
   text-align: center;
+  max-width: 700px;
+  margin: 5em auto 0 auto;
 }
 
 .quote-description {
-  font-size: 0.9rem;
+  font-size: 1rem;
   font-style: italic;
 }
 
@@ -13,8 +15,22 @@
 }
 
 .quote-loading {
-  font-size: 1.5rem;
+  font-size: 5rem;
   font-weight: bold;
-  color: var(--CL-primary-orange);
+  color: var(--CL-primary);
   filter: drop-shadow(0 0 1px rgb(0, 0, 0, 0.5));
+}
+
+@media (min-width: 768px) {
+  .quote {
+    margin: 10em auto 0 auto;
+  }
+
+  .quote-description {
+    font-size: 1.5rem;
+  }
+
+  .quote-loading {
+    font-size: 3rem;
+  }
 }

@@ -17,22 +17,23 @@ button {
 
 body {
   font-family: var(--FF-primary);
-  margin: 1em;
+  margin: 0;
 }
 
 .container {
-  max-width: 1000px;
+  max-width: 1100px;
   margin: 0 auto;
+  padding: 1em;
 }
 
 .title {
   font-size: 2rem;
+  color: var(--CL-neutral-white);
   margin: 0;
-  color: var(--CL-primary);
 }
 
 .subtitle {
   font-size: 1.25rem;
+  color: var(--CL-neutral-white);
   margin: 0;
-  color: var(--CL-secondary);
 }
