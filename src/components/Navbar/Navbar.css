@@ -1,0 +1,41 @@
+.navbar {
+  background-color: var(--CL-primary);
+  padding: 1em 0;
+}
+
+.navbar-system {
+  text-align: center;
+}
+
+.navbar-list {
+  list-style-type: none;
+  padding: 0;
+}
+
+.navbar-item.separator {
+  display: none;
+  color: var(--CL-neutral-white);
+}
+
+.navbar-link {
+  color: var(--CL-neutral-white);
+  text-decoration: none;
+}
+
+@media (min-width: 768px) {
+  .navbar-system {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    text-align: initial;
+  }
+
+  .navbar-list {
+    display: flex;
+    gap: 0.5em;
+  }
+
+  .navbar-item.separator {
+    display: block;
+  }
+}

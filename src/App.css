@@ -1,28 +1,39 @@
 @import url('https://fonts.cdnfonts.com/css/poppins');
 
+:root {
+  --CL-primary: #2e3191;
+  --CL-secondary: #2a2977;
+  --CL-neutral-white: #fff;
+  --CL-neutral-black: #000;
+  --FF-primary: 'Poppins', sans-serif;
+}
+
 input,
 label,
 button {
   border: none;
-  font-family: 'Poppins', sans-serif;
+  font-family: var(--FF-primary);
 }
 
 body {
-  font-family: 'Poppins', sans-serif;
-  margin: 1em;
+  font-family: var(--FF-primary);
+  margin: 0;
 }
 
 .container {
-  max-width: 1000px;
+  max-width: 1100px;
   margin: 0 auto;
+  padding: 1em;
 }
 
 .title {
   font-size: 2rem;
+  color: var(--CL-neutral-white);
   margin: 0;
 }
 
 .subtitle {
   font-size: 1.25rem;
+  color: var(--CL-neutral-white);
   margin: 0;
 }

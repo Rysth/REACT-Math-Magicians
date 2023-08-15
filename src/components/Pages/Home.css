@@ -1,0 +1,23 @@
+.home {
+  padding: 3em 0 0 0;
+}
+
+.home-title {
+  text-align: center;
+  font-size: 1.8rem;
+  color: var(--CL-secondary);
+}
+
+.home-text {
+  text-align: justify;
+}
+
+@media (min-width: 768px) {
+  .home {
+    padding: 6em 0 0 0;
+  }
+
+  .home-title {
+    text-align: left;
+  }
+}

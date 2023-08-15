@@ -1,39 +1,21 @@
-import PropTypes from 'prop-types';
+import { Route, Routes } from 'react-router-dom';
+import Navbar from './components/Navbar/Navbar';
+import Home from './components/Pages/Home';
 import Calculator from './components/Calculator';
 import Quote from './components/Quote/Quote';
 import './App.css';
 
 export default function App() {
   return (
-    <div className="container">
-      <Title text="Calculator App" />
-      <Subtitle text="John Palacios" />
-      <Calculator />
-      <Quote />
+    <div>
+      <Navbar />
+      <div className="container">
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/calculator" element={<Calculator />} />
+          <Route path="/quote" element={<Quote />} />
+        </Routes>
+      </div>
     </div>
   );
 }
-
-function Title({ text }) {
-  return <h1 className="title">{text}</h1>;
-}
-
-Title.defaultProps = {
-  text: '',
-};
-
-Title.propTypes = {
-  text: PropTypes.string,
-};
-
-function Subtitle({ text }) {
-  return <h2 className="subtitle">{text}</h2>;
-}
-
-Subtitle.defaultProps = {
-  text: '',
-};
-
-Subtitle.propTypes = {
-  text: PropTypes.string,
-};
