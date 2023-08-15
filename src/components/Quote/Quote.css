@@ -11,6 +11,8 @@
 
 .quote-description.author {
   font-weight: bold;
+  color: var(--CL-secondary);
+  font-size: 1.5rem;
   margin: 0;
 }
 
@@ -23,14 +25,14 @@
 
 @media (min-width: 768px) {
   .quote {
-    margin: 10em auto 0 auto;
+    margin: 12em auto 0 auto;
   }
 
   .quote-description {
-    font-size: 1.5rem;
+    font-size: 1.2rem;
   }
 
   .quote-loading {
-    font-size: 3rem;
+    font-size: 5rem;
   }
 }

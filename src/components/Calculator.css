@@ -6,6 +6,13 @@
   --CL-neutral-black: #000;
 }
 
+.calculator-title {
+  text-align: center;
+  font-size: 1.8rem;
+  color: var(--CL-secondary);
+  margin: initial auto 0 auto;
+}
+
 .calculator {
   outline: 1px solid var(--CL-primary-light);
   max-width: 500px;

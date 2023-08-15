@@ -19,7 +19,7 @@ export default function Quote() {
         });
         const data = await response.json();
         setQuote({
-          message: data[0]?.quote,
+          message: `"${data[0]?.quote}"`,
           author: data[0]?.author,
         });
       } catch (error) {
