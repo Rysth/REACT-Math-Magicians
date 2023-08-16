@@ -1,0 +1,77 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Navbar Component Should create a Navbar Component Snapshot 1`] = `
+<div
+  className="navbar "
+>
+  <div
+    className="navbar-system container"
+  >
+    <div
+      className="navbar-left"
+    >
+      <h1
+        className="title"
+      >
+        Math Magicians
+      </h1>
+      <h2
+        className="subtitle"
+      >
+        John Palacios
+      </h2>
+    </div>
+    <nav
+      className="navbar-right"
+    >
+      <ul
+        className="navbar-list"
+      >
+        <li
+          className="navbar-item"
+        >
+          <a
+            className="navbar-link"
+            href="/"
+            onClick={[Function]}
+          >
+            Home
+          </a>
+        </li>
+        <li
+          className="navbar-item separator"
+        >
+          |
+        </li>
+        <li
+          className="navbar-item"
+        >
+          <a
+            className="navbar-link"
+            href="/calculator"
+            onClick={[Function]}
+          >
+            Calculator
+          </a>
+        </li>
+        <li
+          className="navbar-item separator"
+        >
+          |
+        </li>
+        <li
+          className="navbar-item"
+        >
+          <a
+            className="navbar-link"
+            href="/quote"
+            onClick={[Function]}
+          >
+            Quote
+          </a>
+        </li>
+      </ul>
+    </nav>
+  </div>
+</div>
+`;

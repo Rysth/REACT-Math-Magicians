@@ -1,0 +1,180 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Calculator Component Should create a Calculator Component Snapshot 1`] = `
+Array [
+  <div>
+    <h3
+      className="calculator-title"
+    >
+      Let's do some Math
+    </h3>
+  </div>,
+  <div
+    className="calculator"
+  >
+    <input
+      className="calculator-result"
+      readOnly={true}
+      type="text"
+      value={0}
+    />
+    <div
+      className="calculator-body"
+    >
+      <div
+        className="calculator-group"
+      >
+        <button
+          className="calculator-button "
+          onClick={[Function]}
+          type="button"
+        >
+          AC
+        </button>
+        <button
+          className="calculator-button "
+          onClick={[Function]}
+          type="button"
+        >
+          +/-
+        </button>
+        <button
+          className="calculator-button "
+          onClick={[Function]}
+          type="button"
+        >
+          %
+        </button>
+        <button
+          className="calculator-button operation"
+          onClick={[Function]}
+          type="button"
+        >
+          ÷
+        </button>
+      </div>
+      <div
+        className="calculator-group"
+      >
+        <button
+          className="calculator-button "
+          onClick={[Function]}
+          type="button"
+        >
+          7
+        </button>
+        <button
+          className="calculator-button "
+          onClick={[Function]}
+          type="button"
+        >
+          8
+        </button>
+        <button
+          className="calculator-button "
+          onClick={[Function]}
+          type="button"
+        >
+          9
+        </button>
+        <button
+          className="calculator-button operation"
+          onClick={[Function]}
+          type="button"
+        >
+          x
+        </button>
+      </div>
+      <div
+        className="calculator-group"
+      >
+        <button
+          className="calculator-button "
+          onClick={[Function]}
+          type="button"
+        >
+          4
+        </button>
+        <button
+          className="calculator-button "
+          onClick={[Function]}
+          type="button"
+        >
+          5
+        </button>
+        <button
+          className="calculator-button "
+          onClick={[Function]}
+          type="button"
+        >
+          6
+        </button>
+        <button
+          className="calculator-button operation"
+          onClick={[Function]}
+          type="button"
+        >
+          -
+        </button>
+      </div>
+      <div
+        className="calculator-group"
+      >
+        <button
+          className="calculator-button "
+          onClick={[Function]}
+          type="button"
+        >
+          1
+        </button>
+        <button
+          className="calculator-button "
+          onClick={[Function]}
+          type="button"
+        >
+          2
+        </button>
+        <button
+          className="calculator-button "
+          onClick={[Function]}
+          type="button"
+        >
+          3
+        </button>
+        <button
+          className="calculator-button operation"
+          onClick={[Function]}
+          type="button"
+        >
+          +
+        </button>
+      </div>
+      <div
+        className="calculator-group"
+      >
+        <button
+          className="calculator-button expanded"
+          onClick={[Function]}
+          type="button"
+        >
+          0
+        </button>
+        <button
+          className="calculator-button "
+          onClick={[Function]}
+          type="button"
+        >
+          .
+        </button>
+        <button
+          className="calculator-button operation"
+          onClick={[Function]}
+          type="button"
+        >
+          =
+        </button>
+      </div>
+    </div>
+  </div>,
+]
+`;
