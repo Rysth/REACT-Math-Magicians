@@ -57,8 +57,6 @@
 - Make simple calculations.
 - Read a random math-related quote.
 
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
-
 ### Future Features <a name="future-features"></a>
 
 - **Implement a Database**
@@ -66,6 +64,8 @@
 ### Live Demo <a name="Live Demo"></a>
 
 - [Live Demo](https://react-math-magician-85xw.onrender.com/)
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 ## 💻 Getting Started <a name="getting-started"></a>
 
