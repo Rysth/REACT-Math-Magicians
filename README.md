@@ -15,6 +15,7 @@
     - [Tech Stack](#tech-stack)
     - [Key Features](#key-features)
     - [Future Features](#future-features)
+    - [Live Demo](#live-demo)
 - [💻 Getting Started](#getting-started)
   - [Setup](#setup)
   - [Test](#test)
@@ -61,6 +62,10 @@
 ### Future Features <a name="future-features"></a>
 
 - **Implement a Database**
+
+### Live Demo <a name="Live Demo"></a>
+
+- [Live Demo](https://react-math-magician-85xw.onrender.com/)
 
 ## 💻 Getting Started <a name="getting-started"></a>
 
