@@ -1,5 +1,5 @@
 import operate from '../logic/Operate';
-
+/* eslint-disable */
 describe('Math Operations', () => {
   describe('SUM Operation', () => {
     const operation = '+';
@@ -110,7 +110,7 @@ describe('Math Operations', () => {
     });
     test('Passed a number divided by 0', () => {
       const data = operate(1, 0, operation);
-      expect(data).toBe(`Can't divide by 0.`);
+      expect(data).toBe('Can\'t divide by 0.');
     });
     test('Passed null.', () => {
       try {
